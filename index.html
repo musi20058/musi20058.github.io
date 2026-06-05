@@ -3,450 +3,402 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Professional Portfolio</title>
-
+<title>Muhsina Portfolio</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
 <style>
-:root{
-    --primary:#0d6efd;
-    --dark:#0f172a;
-    --light:#f8fafc;
+html{scroll-behavior:smooth}
+body{font-family:Segoe UI,sans-serif}
+.navbar{background:#291d1d}
+.navbar-brand,.nav-link{color:#fff!important}
+.hero{min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;position:relative;background:url('https://www.ilustromania.com/cdn.prod.website-files.com/65a1b21a5fcbab501a6f2d5c/67c9df6daa2103711bbf29f2_future-webdesign.jpg') center/cover no-repeat}
+.hero:before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.65)}
+.hero .container{position:relative;z-index:2}
+section{padding:90px 0}
+.card,.about-box,.skill-box,.contact-box{border:none;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+.skill-box{padding:25px;text-align:center}
+.project-card img{height:250px;object-fit:cover}
+.project-item{
+    transition:0.3s;
 }
 
-html{
-    scroll-behavior:smooth;
+.project-item:hover{
+    transform:translateY(-5px);
 }
 
-body{
-    font-family:Segoe UI, sans-serif;
-    color:#334155;
-}
-
-.navbar{
-    background:#332a2a;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-}
-
-.navbar-brand{
-    font-size:28px;
-    font-weight:700;
-    color:var(--primary)!important;
-}
-
-.navbar .nav-link{
-    color: #ffffff !important;
-}
-.nav-link{
-    font-weight:500;
-}
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    position:relative;
-
-    background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920');
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    color:#fff;
-}
-
-/* Dark Overlay */
-.hero::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.65);
-}
-
-/* Content Above Overlay */
-.hero .container{
-    position:relative;
-    z-index:2;
-}
-
-.hero h1{
-    font-size:4rem;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:1.3rem;
-    margin-bottom:30px;
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.5rem;
-    }
-
-    .hero p{
-        font-size:1rem;
-    }
-
-}
-.section-title{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-title h2{
-    font-weight:700;
-    color:var(--dark);
-}
-
-section{
-    padding:100px 0;
-}
-
-.about-box,
-.skill-box,
-.project-card,
-.contact-box{
-    background:#fff;
+.project-item .card{
+    border:none;
     border-radius:15px;
     box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.skill-box{
-    padding:25px;
+.project-item .card-body{
     text-align:center;
-    transition:.3s;
+    padding:25px;
 }
 
-.skill-box:hover{
-    transform:translateY(-5px);
+.project-item h5{
+    font-weight:600;
+    margin-bottom:15px;
 }
 
-.skill-box i{
-    font-size:40px;
-    color:var(--primary);
+.preview-btn{
+    padding:4px 12px;
+    font-size:12px;
+    border-radius:20px;
+}
+.modal-content{
+    border:none;
+    border-radius:20px;
 }
 
-.project-card{
-    overflow:hidden;
-    transition:.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-8px);
-}
-
-.project-card img{
-    height:220px;
-    object-fit:cover;
-}
-
-.contact-box{
-    padding:40px;
-}
-
-footer{
-    background:var(--dark);
+.modal-header{
+    background:#0d6efd;
     color:white;
-    padding:25px 0;
 }
+
+.modal-title{
+    font-weight:600;
+}
+footer{background:#0f172a;color:#fff;padding:20px 0}
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container">
-
-<a class="navbar-brand" href="#">Portfolio</a>
-
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
-
+<a class="navbar-brand" href="#">Muhsina</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="menu">
 <ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#skills">Skills</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#projects">Projects</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
-
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
 </div>
-
 </div>
 </nav>
 
-<!-- Hero -->
 <section id="home" class="hero">
 <div class="container">
-
-<div class="row align-items-center">
-
-<div class="col-lg-7">
-<h1>Hi, I'm Muhsina</h1>
-
-<p class="my-4">
-Professional Web Developer specializing in
-responsive websites, PHP applications,
-Bootstrap UI, and modern web technologies.
-</p>
-
-<a href="#projects" class="btn btn-light btn-lg me-2">
-View Projects
-</a>
-
-<a href="#contact" class="btn btn-outline-light btn-lg">
-Hire Me
-</a>
-
-</div>
-
-
-</div>
-
+<h1 class="display-3 fw-bold">Hi, I'm Muhsina</h1>
+<p class="lead">Professional Web Developer specializing in PHP, MySQL and Bootstrap.</p>
+<a href="#projects" class="btn btn-light btn-lg">View Projects</a>
 </div>
 </section>
 
-<!-- About -->
 <section id="about">
 <div class="container">
-
-<div class="section-title">
-<h2>About Me</h2>
+<h2 class="text-center mb-5">About Me</h2>
+<div class="about-box p-4">
+<p>I am a full-stack web developer with experience in HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.</p>
 </div>
-
-<div class="about-box p-5">
-
-<div class="row">
-
-<div class="col-md-6">
-<h4>Professional Profile</h4>
-
-<p>
-I am a full-stack web developer with experience
-in HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL.
-I build scalable, responsive, and user-friendly
-web applications.
-</p>
-</div>
-
-<div class="col-md-6">
-<h4>Personal Information</h4>
-
-<p><strong>Name:</strong> Muhsina</p>
-<p><strong>Email:</strong> muhsina@gmail.com</p>
-<p><strong>Location:</strong> India</p>
-<p><strong>Experience:</strong> 5+ Years</p>
-
-</div>
-
-</div>
-
-</div>
-
 </div>
 </section>
 
-<!-- Skills -->
 <section id="skills" class="bg-light">
-
 <div class="container">
-
-<div class="section-title">
-<h2>Skills</h2>
-</div>
-
+<h2 class="text-center mb-5">Skills</h2>
 <div class="row g-4">
-
-<div class="col-md-3">
-<div class="skill-box">
-<i class="bi bi-filetype-html"></i>
-<h5 class="mt-3">HTML5</h5>
+<div class="col-md-3"><div class="skill-box"><h5>HTML5</h5></div></div>
+<div class="col-md-3"><div class="skill-box"><h5>CSS3</h5></div></div>
+<div class="col-md-3"><div class="skill-box"><h5>Bootstrap</h5></div></div>
+<div class="col-md-3"><div class="skill-box"><h5>MySQL</h5></div></div>
 </div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-box">
-<i class="bi bi-filetype-css"></i>
-<h5 class="mt-3">CSS3</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-box">
-<i class="bi bi-bootstrap"></i>
-<h5 class="mt-3">Bootstrap</h5>
-</div>
-</div>
-
-<div class="col-md-3">
-<div class="skill-box">
-<i class="bi bi-database"></i>
-<h5 class="mt-3">MySQL</h5>
-</div>
-</div>
-
-</div>
-
 </div>
 </section>
 
-<!-- Projects -->
 <section id="projects">
-
 <div class="container">
-
-<div class="section-title">
-<h2>Projects</h2>
-</div>
-
+<h2 class="text-center mb-5">Projects</h2>
 <div class="row g-4">
-
-<div class="col-md-4">
-
+<div class="col-lg-6">
 <div class="card project-card">
-
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200" class="card-img-top">
 <div class="card-body">
-<h5>Portfolio Website</h5>
-<p>Responsive personal portfolio using Bootstrap.</p>
-<a href="#" class="btn btn-primary">View Details</a>
-</div>
+<h4>Student Management System</h4>
+<p>Student registration and management application.</p>
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#smsModal">View Project</button>
+</div></div></div>
 
-</div>
-
-</div>
-
-<div class="col-md-4">
-
+<div class="col-lg-6">
 <div class="card project-card">
-
-<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=800" class="card-img-top">
-
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200" class="card-img-top">
 <div class="card-body">
-<h5>E-Commerce System</h5>
-<p>Complete shopping website with PHP & MySQL.</p>
-<a href="#" class="btn btn-primary">View Details</a>
+<h4>Online Voting System</h4>
+<p>Secure voting platform with result generation.</p>
+<button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#votingModal">View Project</button>
+</div></div></div>
 </div>
 
+<div class="text-center mt-5">
+<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#allProjectsModal">View All Projects</button>
 </div>
-
 </div>
-
-<div class="col-md-4">
-
-<div class="card project-card">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" class="card-img-top">
-
-<div class="card-body">
-<h5>Voting System</h5>
-<p>Secure online voting application.</p>
-<a href="#" class="btn btn-primary">View Details</a>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- Contact -->
 <section id="contact" class="bg-light">
-
 <div class="container">
-
-<div class="section-title">
-<h2>Contact Me</h2>
-</div>
-
-<div class="row justify-content-center">
-
-<div class="col-lg-8">
-
-<div class="contact-box">
-
+<h2 class="text-center mb-5">Contact Me</h2>
+<div class="contact-box p-4">
 <form>
-
-<div class="row">
-
-<div class="col-md-6 mb-3">
-<input type="text" class="form-control" placeholder="Your Name">
-</div>
-
-<div class="col-md-6 mb-3">
-<input type="email" class="form-control" placeholder="Email Address">
-</div>
-
-</div>
-
-<div class="mb-3">
-<input type="text" class="form-control" placeholder="Subject">
-</div>
-
-<div class="mb-3">
-<textarea class="form-control" rows="5" placeholder="Message"></textarea>
-</div>
-
-<button class="btn btn-primary">
-Send Message
-</button>
-
+<input class="form-control mb-3" placeholder="Your Name">
+<input class="form-control mb-3" placeholder="Email">
+<textarea class="form-control mb-3" rows="5" placeholder="Message"></textarea>
+<button class="btn btn-primary">Send Message</button>
 </form>
-
 </div>
-
 </div>
-
-</div>
-
-</div>
-
 </section>
 
-<!-- Footer -->
-<footer>
-<div class="container text-center">
+<footer><div class="container text-center">© 2026 Muhsina Portfolio. All Rights Reserved.</div></footer>
 
-<p class="mb-0">
-© 2026 Professional Portfolio. All Rights Reserved.
-</p>
+<div class="modal fade" id="smsModal">
+<div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5>Student Management System</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+<div class="modal-body">
+<h4>Project Overview</h4>
+<p>Complete student management application with registration, attendance and reports.</p>
+<ul><li>Student Registration</li><li>Course Management</li><li>Attendance</li><li>Reports</li><li>Admin Dashboard</li></ul>
+<a href="http://muhsina.byethost6.com/sms1" target="_blank" class="btn btn-success">preview</a>
+</div></div></div></div>
+
+<div class="modal fade" id="votingModal">
+<div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><h5>Online Voting System</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+<div class="modal-body">
+<h4>Project Overview</h4>
+<p>Electronic voting platform with candidate management and results.</p>
+<ul><li>Student Login</li><li>Candidate Management</li><li>Vote Casting</li><li>NOTA Option</li><li>Results</li></ul>
+<a href="http://muhsina.byethost6.com/ovf" target="_blank" class="btn btn-success">preview</a>
+</div></div></div></div>
+
+<div class="modal fade" id="allProjectsModal">
+<div class="modal-dialog modal-xl"><div class="modal-content"><div class="modal-header"><h5>All Projects</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+<div class="modal-body">
+<div class="row g-3">
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Student Management System</h5>
+
+            <a href="http://muhsina.byethost6.com/sms1"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi bi-eye-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
-</footer>
+
+
+
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Online Voting System</h5>
+
+            <a href="http://muhsina.byethost6.com/ovf"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-check2-square"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Portfolio Website</h5>
+
+            <a href="http://muhsina.byethost6.com/projects"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-person-badge-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">To-Do App</h5>
+
+            <a href="http://muhsina.byethost6.com/project2"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-list-check"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Calculator</h5>
+
+            <a href="http://muhsina.byethost6.com/project3"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-calculator"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Digital Clock</h5>
+
+            <a href="http://muhsina.byethost6.com/project4"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-clock-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Stop Watch</h5>
+
+            <a href="http://muhsina.byethost6.com/Project5"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-stopwatch-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">BMI Calculator</h5>
+
+            <a href="http://muhsina.byethost6.com/Project6"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-heart-pulse-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Student Score Caluculation System</h5>
+
+            <a href="http://muhsina.byethost6.com/Project7"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-bar-chart-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="col-md-4 project-item">
+
+    <div class="card h-100">
+
+        <div class="card-body">
+
+            <i class="bi bi-mortarboard-fill display-5 text-primary"></i>
+
+            <h5 class="mt-3">Student Group Generator</h5>
+
+            <a href="http://muhsina.byethost6.com/Project8"
+               target="_blank"
+               class="btn btn-success preview-btn">
+               <i class="bi-people-fill"></i> Preview
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div></div></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
